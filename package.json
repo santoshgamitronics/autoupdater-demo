@@ -1,6 +1,6 @@
 {
 	"name": "autoupdater-demo",
-	"version": "0.1.0",
+	"version": "0.1.2",
 	"private": true,
 	"main": "public/electron.js",
 	"homepage": "./",
@@ -37,8 +37,7 @@
 		"publish": {
 			"provider": "github",
 			"owner": "santoshgamitronics",
-			"repo": "autoupdater-demo",
-			"token": "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"
+			"repo": "autoupdater-demo"
 		},
 		"win": {
 			"publish": [
