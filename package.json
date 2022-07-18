@@ -6,7 +6,7 @@
 	"homepage": "./",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/santoshgamitronics/autoupdater-demo.git"
+		"url": "git@github.com:santoshgamitronics/autoupdater-demo.git"
 	},
 	"dependencies": {
 		"@testing-library/jest-dom": "^5.16.2",
@@ -25,7 +25,7 @@
 	"scripts": {
 		"start": "concurrently \"cross-env BROWSER=none react-scripts start\" \"wait-on http://localhost:3000 && electron .\"",
 		"build:prod": "react-scripts build && electron-builder --win",
-		"build:publish": "set GH_TOKEN=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 && react-scripts build && electron-builder --win --publish always"
+		"build:publish": "react-scripts build && electron-builder --win --publish always"
 	},
 	"build": {
 		"appId": "com.autoupdater.demo",
@@ -33,6 +33,12 @@
 		"directories": {
 			"output": "electron-build",
 			"buildResources": "build-assets"
+		},
+		"publish": {
+			"provider": "github",
+			"owner": "santoshgamitronics",
+			"repo": "autoupdater-demo",
+			"token": "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"
 		},
 		"win": {
 			"publish": [
